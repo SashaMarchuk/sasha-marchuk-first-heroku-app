@@ -6,3 +6,17 @@ if (process.env.LE_URL && process.env.LE_CONTENT) {
     return res.send(process.env.LE_CONTENT)
   });
 }
+ 
+app.get('/', (req, res) => {
+  res
+    .status(200)
+    .send('Hello server is running')
+    .end();
+});
+ 
+// Start the server
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});
