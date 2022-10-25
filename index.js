@@ -7,11 +7,11 @@ if (process.env.LE_URL && process.env.LE_CONTENT) {
   });
 }
 
-if (process.env.LE_URL_SECOND && process.env.LE_CONTENT_SECOND) {
-  app.get(process.env.LE_URL_SECOND, function(req, res) {
-    return res.send(process.env.LE_CONTENT_SECOND)
-  });
-}
+// if (process.env.LE_URL_SECOND && process.env.LE_CONTENT_SECOND) {
+//   app.get(process.env.LE_URL_SECOND, function(req, res) {
+//     return res.send(process.env.LE_CONTENT_SECOND)
+//   });
+// }
  
 app.get('/', (req, res) => {
   res
